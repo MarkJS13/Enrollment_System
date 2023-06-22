@@ -1,0 +1,476 @@
+* {
+    box-sizing: border-box;
+}
+a, li, h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    color: unset;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background-color: #F1F7EE;
+    font-family: 'Poppins', sans-serif;
+    color: #242F40;
+}
+
+header {
+    background-color: #242F40;
+    color: #F1F7EE;
+    display: flex;
+    align-items: center;
+    padding: 10px 50px;
+    gap: 40px;
+    font-size: 16px;
+}
+
+.logo {
+    flex: 1;
+
+}
+
+.logo span {
+    font-size: 40px;
+}
+
+.dashboard {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 30px;
+}
+
+
+.dashboard .dashboard_stats{
+   display: flex;
+   gap: 40px;
+}
+
+.dashboard .dashboard_stats .dash-grid {
+    display: grid;
+    border: 1px solid #242f4049;
+    border-bottom: none;
+    grid-template-rows: repeat(auto, 1fr);
+    border-radius: 8px;
+    height: 206px;
+}
+
+.dashboard .dashboard_stats .dash-grid div {
+    border-bottom: 1px solid #242f4044;
+    padding: 8px 13px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.dashboard .dashboard_stats .dash-grid div:hover {
+    background-color: #242F40;
+    color: #F1F7EE;
+}
+
+.dashboard_overview {
+    cursor: pointer;
+}
+
+.dashboard_overview h1{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+    border-bottom: 5px solid rgba(255, 0, 0, 0.658);
+    padding-bottom: 8px;
+}
+
+.dashboard_overview h1 span {
+    font-size: 40px;
+
+}
+
+.dashboard_overview .overview_tiles {
+    display: grid;
+    grid-auto-flow: column;
+    padding-top: 20px;
+    gap: 15px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 20px;
+}
+
+.student_tile .top {
+    background-color: #3D52D5;
+}
+
+.course_tile .top {
+    background-color: #E54B4B;
+}
+
+.enrolled_tile .top {
+    background-color: #381D2A;
+}
+
+.top .logo{
+    font-size: 70px;
+    
+}
+
+.top p {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+}
+
+.top p span {
+    font-size: 12px;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 0 10px;
+    background-color: #D5DCF9;
+    color: #2a4b7c;
+}
+
+.dashboard_overview .overview_tiles .tile {
+    height: auto;
+    width: 250px;
+    display: grid;
+    grid-template-rows: 70% 30%;
+    color: #D5DCF9;
+    border-radius: 20px;
+}
+
+
+
+.course_enrolled {
+    padding-top: 70px;
+
+    width: 780px;
+    margin-left: 250px;
+}
+
+.course_enrolled h1 {
+    font-size: 25px;
+    padding: 15px 0;
+    font-weight: 400;
+}
+.top_course {
+    
+}
+
+.top_course table {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+tr, th, td {
+    border: 1px solid #242F40;
+    padding: 8px;
+    text-align: center;
+    font-size: 17px;
+    
+}
+
+th {
+    background-color: #7b8fad;
+    color: #F1F7EE;
+    font-weight: 400;
+}
+
+td {
+    font-size: 13px;
+}
+
+td button {
+    padding: 0;
+    margin: 0;
+}
+
+.add_student_form {
+    width: 600px;
+    height: 100%;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #D7D9D7;
+
+}
+
+.add_student_form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    
+}
+
+.add_student_form form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.add_student_form form label {
+
+    font-size: 17px;
+    padding-bottom: 5px;
+}
+
+.add_student_form form input, select, button {
+    height: 38px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px !important;
+    border: none;
+}
+
+.add_student_form textarea {
+    padding: 10px;
+    border-radius: 12px;
+    height: 100px;
+    font-size: 14px;
+}
+
+.add_student_form textarea:focus {
+    outline: none;
+}
+
+.add_student_form form button {
+    background-color: #58BC82;
+    border: none;
+    color: #F1F7EE;
+}
+
+.student_list table {
+    border-collapse: collapse;
+}
+
+.student_list td span a, td form button {
+    cursor: alias;
+}
+
+.modal {
+    position: absolute;
+    top: 30%;
+    width: 300px;
+    height: 130px;
+    background-color: rgba(212, 206, 206, 0.973);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-radius: 10px;
+    display: none;
+}
+
+.modal_active {
+    display: flex !important;
+}
+
+.modal h2 {
+    font-size: 15px;
+
+}
+
+.modal .button_choice {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    padding-right: 17px;
+}
+
+.modal .button_choice button {
+    padding: 0 18px;
+    font-weight: 500;
+}
+
+.wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #11172091;
+    display: none;
+}
+
+.wrapper_active {
+    display: block !important;
+    transition: .8s;
+}
+
+.add-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 900;
+    padding-bottom: 10px;
+}
+
+.add-section a {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.add-section span {
+    font-size: 25px;
+}
+
+.add-btn {
+    width: 50px;
+}
+
+.subjects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#selected-subjects {
+    display: flex;
+    flex-direction: row !important;
+}
+
+.subject-item {
+    display: flex;
+    width: 90px;
+    align-items: center;
+}
+
+.subject-item p {
+    font-weight: 700;
+}
+
+.subject-item button {
+    width: 30px;
+    height: 30px;
+    background-color: #242F40 !important;
+    color: white !important;
+}
+
+.welcome-content {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.welcome-content .text {
+    text-align: center;
+}
+
+.welcome-content .text h1{
+    font-size: 50px;
+    color: black;
+}
+
+.welcome-content .text h2{
+    font-size: 30px;
+
+}
+
+.welcome-content .buttons button {
+    background-color: #242F40;
+    color: #D5DCF9;
+    padding: 5px auto;
+    width: 80px;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.welcome-content .buttons .register {
+    border: 1px solid #242F40;
+    background-color: unset;
+    color: #242F40;
+}
+
+
+.more-details {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    gap: 8px;
+    display: none;
+    transition: opacity 0.5s ease-in-out; 
+ }
+ 
+ .show_deets {
+     display: flex !important;
+     
+ }
+ 
+ .more-details li {
+     border: 1px solid #242F40;
+     padding: 8px;
+     font-weight: 500;
+ }
+ 
+ .display-enrolled-student {
+     width: 700px;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     padding: 40px 20px;
+     color: #242F40;
+     padding-top: 0;
+     cursor: pointer;
+ }
+ 
+ 
+ .section_title {
+     padding-bottom: 20px;
+ }
+ 
+ .section_title h1 {
+     font-size: 30px;
+     color: #242F40;
+ }
+ 
+ .name_title {
+     height: 60px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 12px;
+     border: 1px solid #242F40;
+     background-color: #242F40;
+     color: #F1F7EE;
+     border-radius: 7px;
+     margin-bottom: 20px;
+ }
+ 
+ .name_title h1 {
+     font-weight: 500;
+ }
+ 
+ 
+ .subjects {
+     display: flex;
+     justify-content: space-between;
+     flex-direction: row;
+ }
+ 
+ 
+ 
